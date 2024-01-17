@@ -24,7 +24,7 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="password" class="form-label">密碼：</label>
-                                        <input type="password" name="password" v-model="user.password" autocomplete="current-password" />
+                                        <input type="password" class="form-control" name="password" v-model="user.password" autocomplete="current-password" />
                                     </div>
                                     <div class="mb-3 form-check">
                                         <input type="checkbox" class="form-check-input" id="rememberMe" />
@@ -66,8 +66,6 @@ export default {
                 .then((response) => {
                     const { token, expired } = response.data;
                     console.log(response);
-                    // 寫入 cookie token
-                    // expires 設置有效時間
                     document.cookie = `hexToken=${token};expires=${new Date(expired)}; path=/`;
                     this.$router.push('/product')
 
