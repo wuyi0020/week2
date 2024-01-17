@@ -26,10 +26,6 @@
                                         <label for="password" class="form-label">密碼：</label>
                                         <input type="password" class="form-control" name="password" v-model="user.password" autocomplete="current-password" />
                                     </div>
-                                    <div class="mb-3 form-check">
-                                        <input type="checkbox" class="form-check-input" id="rememberMe" />
-                                        <label class="form-check-label" for="rememberMe">記住我</label>
-                                    </div>
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-primary">登入</button>
                                     </div>
